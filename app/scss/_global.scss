@@ -3,11 +3,30 @@ body{
   @extend %dmsans-400;
   color: $accent;
   font-size: 16px;
-  line-height: 30px;
+  // line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.container{
+.main{
+  flex-grow: 1;
+}
+
+.container-fluid{
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a{
+  color: $link;
+  font-size: 14px;
+  line-height: 14px;
+  @extend %rubik-400;
 }
