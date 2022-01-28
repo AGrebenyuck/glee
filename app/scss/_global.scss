@@ -30,3 +30,42 @@ a{
   line-height: 14px;
   @extend %rubik-400;
 }
+
+.slick-dots{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: -225px;
+  button{
+    background-color: rgba($color: #fff, $alpha: .3);
+    border: none;
+    padding: 0;   
+    width: 30px;
+    height: 30px;
+    @extend %rubik-500;
+    font-size: 10px;
+    color: $header-title;
+    text-align: center;
+    border-radius: 50%;
+  }
+}
+
+.slick-dots li + li{
+  margin-left: 12px;
+}
+
+.slick-dots .slick-active{
+  background-color: rgba($color: #fff, $alpha: 1);
+  border: none;
+  padding: 0;   
+  width: 30px;
+  height: 30px;
+  @extend %rubik-500;
+  font-size: 10px;
+  color: $header-title;
+  text-align: center;
+  border-radius: 50%;
+}
+
+

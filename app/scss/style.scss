@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'fonts';
+@import 'libs';
 @import 'reset';
 @import 'global';
 
@@ -174,6 +175,63 @@
   &__link-wrapper + .footer-bottom__link-wrapper{
     padding-left: 15px;
     border-left: 1px solid $link;
+  }
+}
+
+.header-content{
+  &__wrapper{
+    padding: 225px 0 280px;
+    background-image: url('../images/header-content-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  &__slider{
+    display: flex;    
+  }
+  &__box{
+    width: 412px;
+    margin-right: 119px;
+  }
+  &__title{
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: $header-title;
+    margin-bottom: 45px;
+  }
+  &__subtitle{
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $header-subtitle;
+    margin-bottom: 40px;
+  }
+  &__link{
+    display: inline-block;
+    padding: 25px 101px 25px 27px;
+    background-color: #a3bbc8;
+    color: #fff;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url('../images/arrow-right.png');
+      width: 22px;
+      height: 9px;
+      right: 19px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 264px;
+    margin-top: auto;
   }
 }
 
