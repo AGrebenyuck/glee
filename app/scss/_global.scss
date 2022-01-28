@@ -31,6 +31,12 @@ a{
   @extend %rubik-400;
 }
 
+.title{
+  font-size: 32px;
+  color: $title;
+  text-align: center;
+}
+
 .slick-dots{
   position: absolute;
   display: flex;
@@ -66,6 +72,10 @@ a{
   color: $header-title;
   text-align: center;
   border-radius: 50%;
+}
+
+.products__filter-btn.mixitup-control-active{
+  color: #1a1a1a;
 }
 
 
