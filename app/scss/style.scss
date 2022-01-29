@@ -291,89 +291,128 @@
     grid-template-columns: repeat(4,1fr);
     grid-gap: 30px;
   }
-  &__item{
-    padding: 5px;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    position: relative;
-  }
-  &__item:hover{
-    .products__item-user{
-      opacity: 1;
-      pointer-events: all;
-    }
-  }
-  &__item-img{
-    height: 300px;
-    width: 100%; 
-    object-fit: none;
-    object-position: center; 
-  }
-  &__item-title{
-    @extend %dmsans-500;
-    color: $header-title;
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 13px;
-  }
-  &__item-price{
-    @extend %dmsans-700;
-    margin-bottom: 25px;
-    font-size: 16px;
-    color: #a3bbc8;
-    text-align: center;
-  }
-  &__item-user{
-    position: absolute;
-    transform: translate(45px, -190px);   
-    pointer-events: none;
-    opacity: 0;
-    transition: all .3s;
-  }
-  &__user-link{
-    width: 45px;
-    height: 45px;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    display: inline-block;
-  }
-  &__user-link + .products__user-link{
-    margin-left: 16px;
-  }
-  &__user-link--heart,
-  &__user-link--cart,
-  &__user-link--search{
-    background-color: #fff;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    transition: all .3s;
-  }
-  &__user-link--heart:hover,
-  &__user-link--cart:hover,
-  &__user-link--search:hover{
-    background-color: #a3bbc8;
-  }
-  &__user-link--heart{
-    background-image: url('../images/icons/user-heart.svg');
-  }
-  &__user-link--cart{
-    background-image: url('../images/icons/user-cart.svg');
-  }
-  &__user-link--search{
-    background-image: url('../images/icons/user-search.svg');
-  }
-  &__user-link--heart:hover{
-    background-image: url('../images/icons/user-heart-hover.svg');
-  }
-  &__user-link--cart:hover{
-    background-image: url('../images/icons/user-cart-hover.svg');
-  }
-  &__user-link--search:hover{
-    background-image: url('../images/icons/user-search-hover.svg');
-  }
   
 }
 
+.products-item{
+  min-height: 380px;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  text-align: center;
+  border-radius: 10px;
+  &__img-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+  }
+  &__img{
+    object-fit: cover;
+  }
+  &__user-links{
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: all .3s;
+  }
+  &__user-link{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%; 
+    width: 45px;
+    height: 45px;
+    transition: all .3s;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  }
+  &__user-link:hover{
+    background-color: #a3bbc8;
+    path{
+      fill: #fff;
+    }
+  }
+  &__user-link + .products-item__user-link{
+    margin-left: 15px;
+  }
+  &__title{
+    @extend %dmsans-500;
+    color: $header-title;
+    margin-bottom: 10px;
+  }
+  &__price{
+    @extend %dmsans-700;
+    color: #a3bbc8
+  }
+  &:hover{
+    .products-item__user-links{
+      opacity: 1;
+    }
+  }
+}
 
+.recent{
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 870px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fcd7b6;
+    padding: 105px 0 80px;
+    height: 390px;
+  }
+  &__content{
+    position: relative;
+    margin-left: auto;
+    max-width: 330px;
+    margin-right: 150px;
+  }
+  &__item-img{
+    position: absolute;
+    bottom: 0;
+    left: -250px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    text-transform: uppercase;
+    font-size: 26px;
+    color: $header-title;
+    margin-bottom: 15px;
+  }
+  &__descr{
+    color: $header-title;
+    margin-bottom: 20px;
+  }
+  &__link{
+    display: inline-block;
+    padding: 20px 85px 20px 20px;
+    color: $header-nav;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid rgba(#436372,.4);
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url('../images/recent-arrow-right.png.svg');
+      width: 22px;
+      height: 9px;
+      right: 19px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
 
 
 
