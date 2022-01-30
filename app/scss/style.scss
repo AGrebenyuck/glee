@@ -236,7 +236,6 @@
 }
 
 .info{
-  padding: 47px 0 49px;
   background-color: rgba(#fcd7b6,.2);
 
   &__items{
@@ -246,6 +245,24 @@
   &__item{
     display: flex;
     width: 294px;
+    padding: 47px 0 49px;
+    position: relative;
+  }
+  &__item--border::after,
+  &__item--border::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    opacity: 0.1;
+    background-color: $header-title;
+    top: 0;
+  }
+  &__item--border::after{
+    right: -160px;
+  }
+  &__item--border::before{
+    left: -160px;
   }
   &__item-img{
     max-width: 51px;
@@ -363,22 +380,19 @@
   &__item{
     max-width: 870px;
     width: 100%;
+    background-color: #fcd7b6;
     display: flex;
     justify-content: center;
-    background-color: #fcd7b6;
-    padding: 105px 0 80px;
-    height: 390px;
+    padding: 100px 0 90px;
   }
   &__content{
-    position: relative;
-    margin-left: auto;
     max-width: 330px;
-    margin-right: 150px;
   }
   &__item-img{
-    position: absolute;
-    bottom: 0;
-    left: -250px;
+    margin-right: 40px; 
+    margin-top: -200px;
+    object-fit: cover;
+    object-position: center center;
   }
   &__title{
     @extend %dmsans-700;
