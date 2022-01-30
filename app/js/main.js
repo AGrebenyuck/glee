@@ -8,6 +8,13 @@ $(function(){
   });
 
   var mixer = mixitup('.products__items', {
-
+    selectors: {
+        control: '.products__filter-btn'
+    }
+  });
+  var mixerdesign = mixitup('.design__items', {
+    selectors: {
+      control: '.design__filter-btn'
+    }
   });
 })
