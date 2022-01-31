@@ -524,6 +524,9 @@
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     border-radius: 5px;
     max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
   }
   &__item-imgbox{
     position: relative;
@@ -535,10 +538,8 @@
     background-position: center center;
   }
   &__item-box{
-    padding: 35px 30px 25px 25px;
-    min-height: 187px;
-    display: flex;
-    flex-direction: column;
+    padding: 35px 30px 0px 25px;
+    
   }
   &__item-category{
     display: inline-block;
@@ -561,6 +562,10 @@
     @extend %dmsans-500;
     color: #262626;
     line-height: 22px;
+  }
+  &__info-wrapper{
+    padding: 0px 30px 25px 25px;
+    margin-top: auto;
   }
   &__info{
     padding-top: 22px;
