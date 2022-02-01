@@ -74,11 +74,51 @@ a{
   border-radius: 50%;
 }
 
-.products__filter-btn.mixitup-control-active{
-  color: #1a1a1a;
-}
+.products__filter-btn.mixitup-control-active,
 .design__filter-btn.mixitup-control-active{
   color: #1a1a1a;
 }
 
+.top{
+  background-color: #edf1f4;
+  text-align: center;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__title{
+    color: #222933;
+    @extend %rubik-300;
+    font-size: 36px;
+  }
+}
 
+.breadcrumbs{
+  display: flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    padding-right: 20px;
+    position: relative;
+    &::after{
+      content: '/';
+      position: absolute;
+      right: 8px;
+      top: 1px;
+
+    }
+  }
+  &__item:last-child{
+    padding-right: 0;
+    &::after{
+      display: none;
+    }
+  }
+  &__link{
+    @extend %rubik-400;
+    font-size: 14px;
+    color: #222933;
+  }
+}
