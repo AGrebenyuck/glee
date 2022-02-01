@@ -889,10 +889,7 @@
   &__item{
     margin-bottom: 20px;
   }
-  &__item::marker{
-    display: inline-block;
-  }
-  &__item,
+  &__item-text,
   &__text{
     @extend %rubik-400;
     color: $header-title;
