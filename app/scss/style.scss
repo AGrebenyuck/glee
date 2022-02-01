@@ -606,6 +606,11 @@
 }
 
 .partners{
+  &--bg{
+    background-color: #fef7f0;
+    padding: 75px 0 90px;
+    margin-top: 0;
+  }
   margin-top: 100px;
   &__items{
     display: flex;
@@ -904,7 +909,67 @@
 
 }
 
-
+.modal{
+  padding: 120px 0;
+  &__form,
+  &__register{
+    max-width: 470px;
+    margin: 0 auto;
+  }
+  &__form{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f6f6f6;
+  }
+  &__label,
+  &__checkbox,
+  &__link,
+  &__register-text{
+    color: $header-nav;
+    @extend %rubik-400;
+    font-size: 14px;
+  }
+  &__input{
+    width: 100%;
+    padding: 0 15px;
+    height: 60px;
+    border: 1px solid #f6f6f6;
+    margin-top: 13px;
+    margin-bottom: 27px;
+  }
+  &__input[type=password]{
+    margin-bottom: 37px;
+  }
+  &__btn{
+    @extend %rubik-500;
+    font-size: 18px;
+    width: 100%;
+    padding: 20px 0;
+    color: #fff;
+    background-color: #a3bbc8;
+    border: none;
+    margin-bottom: 35px;
+  }
+  &__box{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__register{
+    padding-top: 30px;
+    text-align: center;
+  }
+  &__register-text{
+    margin-bottom: 23px;
+  }
+  &__register-link{
+    width: 100%;
+    display: inline-block;
+    padding: 20px 0;
+    border: 1px solid #a3bbc8;
+    @extend %rubik-500;
+    font-size: 18px;
+    color: $header-nav;
+  }
+}
 
 
 
