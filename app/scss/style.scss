@@ -485,10 +485,11 @@
   justify-content: center;
   align-items: center;
   min-height: 500px;
+  margin-bottom: 120px;
 }
 
 .articles{
-  padding-top: 450px;
+  padding-top: 330px;
   &__inner{
     background-color: rgba(#fcd7b6,.2);
     padding-top: 1px;
@@ -497,6 +498,7 @@
   &__top{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 45px;
     margin-top: -338px;
   }
@@ -785,7 +787,7 @@
 }
 
 .team{
-  padding: 120px 0 57px;
+  padding: 120px 0 180px;
   &__inner{
     display: flex;
   }
@@ -871,7 +873,39 @@
   }
 }
 
+.terms{
+  padding: 120px 0;
+  &__title{
+    @extend %rubik-500;
+    font-size: 24px;
+    color: $header-title;
+    margin-bottom: 25px;
+  } 
+  ol.terms__list{
+    padding-left: 28px;
+    list-style-type: decimal-leading-zero;
+    margin-bottom: 65px;
+  }
+  &__item{
+    margin-bottom: 20px;
+  }
+  &__item::marker{
+    display: inline-block;
+  }
+  &__item,
+  &__text{
+    @extend %rubik-400;
+    color: $header-title;
+    line-height: 30px;
+  }
+  &__text{
+    margin-bottom: 60px;
+  }
+  &__text:last-child{
+    margin-bottom: 0;
+  }
 
+}
 
 
 
