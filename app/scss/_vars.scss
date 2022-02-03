@@ -1,8 +1,10 @@
 
 $title: #191919;
 $accent: #585858;
+$accent-blue: #edf1f4;
 $header-nav: #436372;
 $header-title: #243f4d;
+$hover-blue: #a3bbc8;
 $header-subtitle: #436372;
 $filter-btn: #8b8b8b;
 $link: #7b7b7b;
@@ -52,4 +54,12 @@ $link: #7b7b7b;
 %poppins-600{
   font-family: 'Poppins-SemiBold',sans-serif;
   font-weight: 600;
+}
+
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }

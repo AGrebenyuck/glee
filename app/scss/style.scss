@@ -312,10 +312,111 @@
 }
 
 .products-item{
+  max-width: 270px;
+  width: 100%;
   min-height: 380px;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
   text-align: center;
   border-radius: 10px;
+  & .star,
+  &__text,
+  &__buttons{
+    display: none;
+  }
+  &.products-item--list{
+    display: flex;
+    min-width: 100%;
+    box-shadow: none;
+    text-align: left;
+    .star,
+    .products-item__text,
+    .products-item__buttons{
+      display: block;
+    }
+
+    .products-item__img-box{
+      max-width: 370px;
+      height: 500px;
+      width: 100%;
+      border: 1px solid #f2f2f2;
+      margin-right: 55px;
+    }
+    .products-item__user-links{
+      display: none;
+    }
+    .products-item__wrapper{
+      @extend %rubik-400;
+      display: flex;
+      flex-direction: column;
+      text-align-last: left;
+      width: 100%;
+    }
+    .products-item__title{
+      @extend %rubik-400;
+      padding-top: 90px;
+      order: 1;
+      color: #333333;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .products-item__price{
+      order: 3;
+      margin: 30px 0;
+      font-size: 30px;
+      color: #333;
+    }
+    .star{
+      order: 2;
+    }
+
+    .products-item__text{
+      order: 4;
+      color: $header-title;
+      margin-bottom: 36px;
+      text-align-last: left;
+      line-height: 30px;
+      max-width: 410px;
+    }
+    .products-item__buttons{
+      order: 5;
+      display: flex;
+    }
+    .products-item__button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      margin-right: 10px;
+      transition: all .3s;
+      position: relative;
+      &:hover{
+        background-color: $hover-blue;
+        path{
+          fill: #fff;
+        }
+      }
+      &--special:hover{
+        width: 208px;
+        svg{
+          display: none;
+        }
+        &::before{
+          content: 'ADD to cart';
+          position: absolute;
+          color: #fff;
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+        
+      }
+    }
+      
+  }
   &__img-box{
     position: relative;
     display: flex;
@@ -971,9 +1072,224 @@
   }
 }
 
+.shop{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+  }
+}
 
+.shop-filters{
+  max-width: 270px;
+  width: 100%;
+  margin-right: 30px;
+  @extend %rubik-400;
+  color: $header-title;
+}
 
+.filter{
+  &__title{
+    display: inline-block;
+    text-transform: uppercase;
+    @extend %dmsans-700;
+    font-size: 18px;
+    padding-right: 55px;
+    position: relative;
+    margin-bottom: 30px;
+    &::after{
+      content: '';
+      position: absolute;
+      background-color: #a3bbc8;
+      height: 1px;
+      width: 40px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
 
+.filter-category{
+  .filter-category__list{
+    margin-bottom: 75px;
+  }
+  &__item{
+    margin-bottom: 1px;
+  }
+  &__link{
+    display: inline-block;
+    padding: 17px 23px 17px 15px;
+    border-radius: 5px;
+    color: inherit;
+    width: 100%;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      right: 23px;
+      background-image: url('../images/icons/articles-arrow-blue.svg');
+    }
+    &:hover,
+    &--active{
+      background-color: $accent-blue;
+    }
+  } 
+}
 
+.filter-price{
+  margin-bottom: 85px;
+  &__nums{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.irs--flat {
+  height: 17px;
+  margin-bottom: 20px;
+}
+
+.irs--flat .irs-handle {
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  background-color: #a3bbc8;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-line {
+  top: 6px;
+  height: 1px;
+  background-color: #c2d2db;
+  border-radius: 0px;
+}
+
+.irs--flat .irs-bar {
+  top: 6px;
+  height: 2px;
+  background-color: $hover-blue;
+}
+
+.irs-from, .irs-to, .irs-single {
+  display: none;  
+
+}
+
+.irs--flat .irs-min, .irs--flat .irs-max {   
+  display: none;  
+}
+
+.filter-brand{
+  margin-bottom: 65px;
+  &__label{
+    margin-bottom: 1px; 
+    display: block;
+  }
+  &__checkbox{
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 23px 17px 15px;
+    border-radius: 5px;
+  }
+  &__num{
+    color: #b3b3b3;
+  }
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-brand__checkbox{
+      background-color: $accent-blue;
+      .filter-brand__num{
+        color: $header-title;
+      }
+    }
+  }
+}
+
+.recent-products{
+  &__item{
+    display: flex;
+    margin-bottom: 23px;
+  }
+  &__item-imgbox{
+    height: 70px;
+    max-width: 70px;
+    width: 100%;
+    border: 1px solid #f2f2f2;
+    margin-right: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item-img{
+    object-fit: cover;
+  }
+  &__item-title{
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  &__item-price{
+    display: inline-block;
+    margin-top: 10px;
+    color: #333;
+    font-size: 15px;
+  }
+}
+
+.jq-ry-container{
+  padding: 0;
+}
+
+.shop-content{
+  width: 100%;
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding-bottom: 105px; 
+    .products-item{
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--list{
+    justify-content: flex-start;
+  }
+  &__btn{
+    padding: 17px 17px 17px 20px;
+    @extend %rubik-400;
+    color: $header-title;
+    border: 1px solid $hover-blue;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0 15px;
+  }
+  &__list{
+    display: flex;
+  }
+  &__item + .pagination__item{
+    margin-left: 15px;
+  }
+  &__link{
+    padding: 17px 20px;
+    @extend %rubik-400;
+    color: $header-title;
+    border: 1px solid $hover-blue;
+    font-size: 16px;
+    &--active{
+      background-color: $hover-blue;
+    }
+  }
+}
 
 @import 'media';
