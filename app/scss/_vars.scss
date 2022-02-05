@@ -63,3 +63,13 @@ $link: #7b7b7b;
   clip: rect(0 0 0 0);
   position: absolute;
 }
+
+%btn{
+  background-color: $hover-blue;
+  color: #fff;
+  @extend %rubik-400;
+  font-size: 15px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}

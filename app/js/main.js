@@ -1,5 +1,23 @@
 $(function(){
 
+  $('.product-content__form-input').styler({});
+
+  $('.product-slide__thumb').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    vertical: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    draggable: false,
+  });
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true  
+  });
+
   $('.recent-products__item-star').rateYo({
     starWidth: "12px",
     ratedFill: "#ffcc00",
