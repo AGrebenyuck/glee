@@ -394,6 +394,7 @@
       margin-right: 10px;
       transition: all .3s;
       position: relative;
+      cursor: pointer;
       &:hover{
         background-color: $hover-blue;
         path{
@@ -1156,6 +1157,7 @@
   width: 16px;
   height: 16px;
   background-color: #a3bbc8;
+  cursor: pointer;
 }
 
 .irs--flat .irs-handle>i:first-child {
@@ -1195,6 +1197,7 @@
     justify-content: space-between;
     padding: 17px 23px 17px 15px;
     border-radius: 5px;
+    cursor: pointer;
   }
   &__num{
     color: #b3b3b3;
@@ -1247,6 +1250,35 @@
 
 .shop-content{
   width: 100%;
+  &__filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 30px;
+    margin-bottom: 40px;
+    border: 1px solid #ebebeb;
+  }
+  &__view{
+    display: flex;
+    align-items: center;
+    &--active{
+      path{
+        fill: $hover-blue;
+      }
+    }
+  }
+  &__view-grid,
+  &__view-list{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  &__sort-select{
+    margin-left: 30px;
+    
+  }
   &__inner{
     display: flex;
     flex-wrap: wrap;
@@ -1256,6 +1288,81 @@
       margin-bottom: 40px;
     }
   }
+}
+
+.jq-selectbox__select {
+  height: 32px;
+  padding: 0 18px 0 10px;
+  border: none;
+  border-radius: 0px;
+  background: none;
+  box-shadow: none;
+  font-size: 16px;
+  @extend %dmsans-400;
+  color: $accent;
+  text-shadow: 1px 1px #fff;
+  display: flex;
+  align-items: center;
+  &:hover{
+    background: none;
+    background-color: $accent-blue;
+  }
+}
+
+.jq-selectbox__select-text{
+  @extend %dmsans-400;
+  font-size: 16px;
+}
+
+.jq-selectbox__trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  border: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  width: 10px;
+  height: 5px;
+  border: none;
+  background-image: url('../images/icons/angle-down.svg');
+}
+
+.jq-selectbox__dropdown {
+  width: auto;
+  margin: 2px 0 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+  font: 16px 'DMSans-Regular',sans-serif;
+}
+
+.jq-selectbox__dropdown ul {
+  padding: 0;
+}
+
+.jq-selectbox li.selected {
+  background-color: #a3abb1;
+  color: #fff;
+}
+
+.jq-selectbox li {
+  min-height: 18px;
+  padding: 5px 10px 6px;
+  color: #231f20;
+}
+
+.jq-selectbox li:hover {
+  background-color: #08c;
+  color: #fff;
 }
 
 .pagination{
