@@ -1111,30 +1111,34 @@
 }
 
 .filter-category{
-  .filter-category__list{
+  &__form{
     margin-bottom: 75px;
   }
-  &__item{
+  &__label{
     margin-bottom: 1px;
+    display: block;
   }
-  &__link{
-    display: inline-block;
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-category__checkbox{
+      background-color: $accent-blue;
+    }
+  }
+  &__checkbox{
+    display: block;
     padding: 17px 23px 17px 15px;
     border-radius: 5px;
-    color: inherit;
-    width: 100%;
     position: relative;
+    cursor: pointer;
     &::after{
       content: '';
       position: absolute;
       width: 5px;
       height: 10px;
+      top: 50%;
+      transform: translateY(-50%);
       right: 23px;
       background-image: url('../images/icons/articles-arrow-blue.svg');
-    }
-    &:hover,
-    &--active{
-      background-color: $accent-blue;
     }
   } 
 }
