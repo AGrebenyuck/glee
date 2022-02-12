@@ -63,3 +63,27 @@ $link: #7b7b7b;
   clip: rect(0 0 0 0);
   position: absolute;
 }
+
+%btn{
+  background-color: $hover-blue;
+  color: #fff;
+  @extend %rubik-400;
+  font-size: 15px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+%link-border{
+  border: 1px solid $hover-blue;
+  &::after{
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 19px;
+    background-image: url('../images/icons/arrow-right-blue.svg');
+  }
+}
