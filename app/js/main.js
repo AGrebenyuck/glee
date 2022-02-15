@@ -1,5 +1,13 @@
 $(function(){
 
+  $('.footer-top__item-title').on('click', function(){
+    $($(this).next('.footer-top__list')).slideToggle();
+  });
+
+  $('.user-nav__more').on('click', function(){
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+
   $('.related-products__content').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -75,14 +83,15 @@ $(function(){
   $('.filter-price__input').ionRangeSlider({
     type: "double",
     onStart: function (data) {
-      $('.filter-price__min').text('$'+ data.from + '.00');      
+      $('.filter-price__min').text('$'+ data.from + '.00');   
       $('.filter-price__max').text('$'+ data.to + '.00');    
     },
     onChange: function (data) {
       $('.filter-price__min').text('$'+ data.from + '.00');      
       $('.filter-price__max').text('$'+ data.to + '.00');
-    }
+    },
   });
+
 
   $('.header-content__inner').slick({
     arrows: false,

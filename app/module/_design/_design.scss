@@ -1,0 +1,102 @@
+.design{
+  padding: 94px 0 120px;
+  &__title{
+    margin-bottom: 18px;
+  }
+  &__filter{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 76px;
+  }
+  &__filter-btn{
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    @extend %dmsans-700;
+    color: $filter-btn;
+    cursor: pointer;
+  }
+  &__filter-btn + .design__filter-btn{
+    margin-left: 30px;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 35px 30px;
+  }
+  &__item{
+    min-height: 246px;
+    padding: 43px 38px;
+    border-radius: 5px;
+  }
+  &__item-content{
+    max-width: 171px;
+  }
+  &__item-title{
+    display: inline-block;
+    line-height: 20px;
+    @extend %dmsans-700;
+    color: $title;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  &__item-category{
+    @extend %dmsans-700;
+    color: #a3bbc8;
+  }
+}
+
+@media (max-width: 1200px){
+  .design{
+    &__items{
+      grid-template-columns: repeat(2,1fr);
+    }
+    &__item{
+      background-color: #f8f8f8;
+      background-repeat: no-repeat;
+      background-size: 80%;
+      background-position: center right;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .design{
+    padding: 75px 0;
+    &__filter{
+      margin-bottom: 40px;
+    }
+    &__item{      
+      background-size: 92%;
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .design{
+    &__filter{
+      flex-wrap: wrap;    
+    }
+    &__filter-btn{
+      margin-bottom: 10px;
+    }
+    &__item{  
+      background-image: none !important;    
+      min-height: 175px;
+    }
+  }
+}
+
+@media (max-width: 420px){
+  .design{
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+    }
+    &__item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

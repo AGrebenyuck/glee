@@ -1,0 +1,111 @@
+.recent{
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fcd7b6;
+  }
+  &__item{
+    max-width: 870px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 75px;
+  }
+  &__content{
+    max-width: 330px;
+  }
+  &__item-img{
+    margin-right: 40px; 
+    margin-top: -200px;
+    object-fit: cover;
+    object-position: center center;
+  }
+  &__title{
+    @extend %dmsans-700;
+    text-transform: uppercase;
+    font-size: 26px;
+    color: $header-title;
+    margin-bottom: 15px;
+  }
+  &__descr{
+    color: $header-title;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+  &__link{
+    display: inline-block;
+    padding: 20px 85px 20px 20px;
+    color: $header-nav;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid rgba(#436372,.4);
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url('../images/recent-arrow-right.png.svg');
+      width: 22px;
+      height: 9px;
+      right: 19px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media (max-width: 1200px){
+  .recent{
+    &__item-img {
+      margin-top: -70px;
+      height: 290px;
+    }
+  }
+}
+
+@media (max-width: 1050px){
+  .recent{
+    &__inner{
+      flex-direction: column;
+    }
+    &__item{
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .recent{
+    &__inner{
+      padding-bottom: 50px;
+    }
+    &__item-img {
+      margin-top: 0px;
+      height: 200px;
+    }
+    &__item{
+      padding: 75px 10px 0px;
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .recent{    
+    &__item{
+      flex-direction: column;
+      align-items: center;
+    }
+    &__item-img {
+      margin-bottom: 20px;
+    }
+    &__content{
+      max-width: 100%;
+      text-align: center;
+    }
+    &__descr{
+      max-width: 100%;
+    }
+  }
+}

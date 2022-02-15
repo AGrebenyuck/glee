@@ -1,0 +1,24 @@
+.video{
+  background-image: url('../images/video-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  margin-bottom: 120px;
+}
+
+@media (max-width: 1200px){
+  .video{
+    min-height: 400px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px){
+  .video{
+    min-height: 250px;
+  }
+}
