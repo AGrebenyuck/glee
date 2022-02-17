@@ -3,19 +3,9 @@
 @import 'libs';
 @import 'reset';
 @import 'global';
-
-
-
-
-
-
-
-
-
-
-
-
-
+@import '../module/_articles/_articles';
+@import '../module/_header/_header';
+@import '../module/_footer/_footer';
 
 
 
@@ -26,7 +16,7 @@
 
   }
   &__img{
-    margin-right: 50px;
+    margin-right: 47px;
   }
   &__content{
     max-width: 555px;
@@ -34,7 +24,7 @@
   }
   &__time{
     display: flex;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
   }
   &__time-num{
     color: #a3bbc8;
@@ -54,15 +44,16 @@
     @extend %dmsans-700;
     font-size: 36px;
     color: $header-title;
-    margin-bottom: 45px;
+    margin-bottom: 31px;
   }
   &__text{
     @extend %rubik-400;
     color: $header-title;
-    margin-bottom: 65px;    
+    margin-bottom: 58px;  
+    line-height: 30px;  
   }
   ul.experience__list{
-    padding-top: 40px;
+    padding-top: 34px;
     display: flex;
     position: relative;
     &::before{
@@ -76,8 +67,8 @@
     }
   }
   &__item{
-    padding-left: 65px;
-    padding-right: 35px;
+    padding-left: 55px;
+    padding-right: 25px;
     position: relative;
     &::after{
       content: '';
@@ -98,13 +89,16 @@
       background-color: #e6eaf0;
     }
   }
+  &__item:last-child{
+    padding-right: 0;
+  }
 
   &__item--project::before,
   &__item--revenue::before,
   &__item--awards::before{
     content: '';
     position: absolute;
-    left: 10px;
+    left: 0px;
     top: 10px;
   }
   &__item--project::before{
@@ -128,6 +122,7 @@
     @extend %dmsans-700;
     font-size: 36px;
     color: $header-title;
+    margin-bottom: -3px;
   }
   &__item-text{
     @extend %dmsans-700;
@@ -136,7 +131,7 @@
 }
 
 .benefits{
-  padding: 85px 0 80px;
+  padding: 85px 0 70px;
   background-color: #fcd7b6;
   text-align: center;
   &__inner{
@@ -144,7 +139,7 @@
     justify-content: space-around;
   }
   &__item{
-    padding-top: 80px;
+    padding-top: 75px;
     position: relative;
   }
   &__item--satisfied::before,
@@ -192,7 +187,7 @@
 }
 
 .team{
-  padding: 120px 0 180px;
+  padding: 120px 0 185px;
   &__inner{
     display: flex;
   }
@@ -204,12 +199,12 @@
     @extend %dmsans-700;
     font-size: 36px;
     color: $header-title;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   &__text{
     @extend %rubik-400;
     color: $header-title;
-    margin-bottom: 35px; 
+    margin-bottom: 48px; 
     line-height: 30px;
   }
   &__link{
@@ -220,6 +215,7 @@
     border: none;
     cursor: pointer;
     position: relative;
+    display: inline-block;
     &::after{
       content: '';
       position: absolute;
@@ -243,7 +239,7 @@
   }
   
   &__item-img{
-    height: 370px;
+    height: 320px;
     object-fit: cover;
   }
   &__item-box{
@@ -251,10 +247,10 @@
     justify-content: space-between;
     max-width: 325px;
     background-color: #fff;
-    padding: 30px 25px;
+    padding: 26px 25px 30px 25px;
     position: absolute;
     left: 0;
-    bottom: -60px;
+    bottom: -68px;
     width: 100%;
     box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
   }

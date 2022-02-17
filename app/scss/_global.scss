@@ -82,7 +82,7 @@ a{
 .top{
   background-color: #edf1f4;
   text-align: center;
-  height: 130px;
+  height: 123px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,6 +98,7 @@ a{
   justify-content: center;
   &__list{
     display: flex;
+    flex-wrap: wrap;
   }
   &__item{
     padding-right: 20px;
