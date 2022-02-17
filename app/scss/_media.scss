@@ -114,6 +114,24 @@
   }
 }
 
+@media (max-width: 880px){ 
+  .blog-one{
+    &__form{
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  .contacts{
+    &__form-box{
+      display: block;
+    }
+    &__form-input{
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+}
+
 @media (max-width: 768px){ 
   .team{
     &__items{
@@ -155,6 +173,44 @@
       display: none;
     }
   }
+  .blog-one{
+    &__content-box{
+      h3{
+        font-size: 32px;
+      }
+      blockquote{
+        padding: 15px;
+      }
+      p{
+        margin-bottom: 20px;
+      }
+    }
+    &__author{
+      display: block;
+    }
+    &__author-img{
+      display: none;
+    }
+    &__author-info{
+      margin-bottom: 10px;
+    }
+    &__author-tag{
+      span{
+        margin-right: 15px;
+      }
+    }
+    &__author-tagbox{
+      width: auto;
+    }
+  }
+  .comments-item{
+    &__img{
+      display: none;
+    }
+    &__answer{
+      margin-left: 115px;
+    }
+  }
 }
 
 @media (max-width: 420px){
@@ -176,6 +232,14 @@
     }
     &__info-date{
       margin-bottom: 15px;
+    }
+  }
+  .comments-item{
+    &__date{
+      display: none;
+    }
+    &__answer{
+      margin-left: 40px;
     }
   }
 } 
