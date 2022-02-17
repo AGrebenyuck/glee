@@ -390,7 +390,7 @@
     font-size: 18px;
     padding-right: 55px;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     &::after{
       content: '';
       position: absolute;
@@ -440,7 +440,7 @@
 
 .filter-category{
   &__form{
-    margin-bottom: 75px;
+    margin-bottom: 37px;
   }
   &__label{
     margin-bottom: 1px;
@@ -454,7 +454,7 @@
   }
   &__checkbox{
     display: block;
-    padding: 17px 23px 17px 15px;
+    padding: 12px 23px 12px 15px;
     border-radius: 5px;
     position: relative;
     cursor: pointer;
@@ -1045,7 +1045,7 @@
     height: 501px;
     width: 1005px;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 33px;
   }
   &__img{
     width: 830px;
@@ -1057,6 +1057,7 @@
     display: flex;
     left: 0;
     bottom: 0;
+    width: 275px;
     padding: 28px 22px 30px;
     background-color: $hover-blue;
     color: #fff;
@@ -1075,7 +1076,7 @@
   
   &__info-date,
   &__info-author{
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 18px;
     position: relative;
   }
@@ -1101,7 +1102,7 @@
   &__title{
     color: #333;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 23px;
   }
   &__text{
     color: $header-title;
@@ -1122,7 +1123,7 @@
 .recent-posts{
   &__item{
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
   }
   &__item-imglink{
     display: block;
@@ -1150,7 +1151,7 @@
     color: #9a9a9a;
     padding-left: 20px;
     position:relative;
-    font-size: 15px;
+    font-size: 12px;
     &::after{
       content: '';
       position: absolute;
