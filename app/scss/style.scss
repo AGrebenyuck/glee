@@ -6,6 +6,7 @@
 @import '../module/_articles/_articles';
 @import '../module/_header/_header';
 @import '../module/_footer/_footer';
+@import '../module/_info-products/_info-products';
 
 
 
@@ -368,9 +369,25 @@
 }
 
 .shop{
-  padding: 120px 0;
+  padding: 115px 0;
   &__inner{
     display: flex;
+  }
+  &__btn{
+    width: 60px;
+    height: 60px;
+    background-color: $hover-blue;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    display: none;
+    z-index: 101;
   }
 }
 
@@ -440,7 +457,7 @@
 
 .filter-category{
   &__form{
-    margin-bottom: 37px;
+    margin-bottom: 50px;
   }
   &__label{
     margin-bottom: 1px;
@@ -472,7 +489,7 @@
 }
 
 .filter-price{
-  margin-bottom: 85px;
+  margin-bottom: 82px;
   &__nums{
     display: flex;
     justify-content: space-between;
@@ -519,7 +536,7 @@
 }
 
 .filter-brand{
-  margin-bottom: 65px;
+  margin-bottom: 43px;
   &__label{
     margin-bottom: 1px; 
     display: block;
@@ -527,7 +544,7 @@
   &__checkbox{
     display: flex;
     justify-content: space-between;
-    padding: 17px 23px 17px 15px;
+    padding: 12px 23px 12px 12px;
     border-radius: 5px;
     cursor: pointer;
   }
