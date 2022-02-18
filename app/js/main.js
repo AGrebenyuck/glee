@@ -5,8 +5,10 @@ $(function(){
     
     if(height > 500){
       $('.header__inner').addClass('header__inner--fixed');
+      $('.header').addClass('header--fixed');
     } else{
       $('.header__inner').removeClass('header__inner--fixed');
+      $('.header').removeClass('header--fixed');
     }
   });
 
