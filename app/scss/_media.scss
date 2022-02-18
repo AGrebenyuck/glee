@@ -178,6 +178,9 @@
   .modal{
     padding: 60px 0;
   }
+  .terms{
+    padding: 60px 0;
+  }
 }
 
 @media (max-width: 950px){ 
@@ -403,6 +406,11 @@
   }
   .related-products{
     padding: 60px 0 0;
+  }
+  .terms{
+    &__item-text{
+      line-height: 26px;
+    }
   }
 }
 
