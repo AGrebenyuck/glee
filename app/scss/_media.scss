@@ -175,6 +175,9 @@
   .product-one{
     padding-top: 60px;
   }
+  .modal{
+    padding: 60px 0;
+  }
 }
 
 @media (max-width: 950px){ 
@@ -438,6 +441,16 @@
       #map{
         height: 200px;
       }
+    }
+  }
+  .modal{
+    &__box{
+      display: block;
+    }
+    &__link{
+      display: block;
+      margin-top: 15px;
+      text-align: center;
     }
   }
 } 
