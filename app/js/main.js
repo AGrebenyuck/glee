@@ -17,7 +17,27 @@ $(function(){
     slidesToScroll: 1,
     prevArrow: '<button type="button" class="slick-prev"><img src="../images/icons/arrow-right-blue.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="../images/icons/arrow-right-blue.svg" alt=""></button>',
-    infinite: false
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 951,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 881,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+    ]  
   });
 
   $('.product-tabs__top-item').on('click', function(e){
@@ -59,7 +79,15 @@ $(function(){
     asNavFor: '.product-slide__thumb',
     draggable: false,
     arrows: false,
-    fade: true  
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 1051,
+        settings: {
+          draggable: true
+        }
+      },
+    ]  
   });
 
   $('.recent-products__item-star').rateYo({
