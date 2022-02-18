@@ -5,6 +5,14 @@
     align-items: center;
     padding: 50px 0 50px;
   }
+  &__inner--fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 120;
+  }
 }
 
 .menu{

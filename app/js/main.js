@@ -1,5 +1,15 @@
 $(function(){
 
+  $(window).scroll(function() {
+    var height = $(window).scrollTop();
+    
+    if(height > 500){
+      $('.header__inner').addClass('header__inner--fixed');
+    } else{
+      $('.header__inner').removeClass('header__inner--fixed');
+    }
+  });
+
   $('.shop__btn').on('click', function(){
     $('.shop-filters').slideToggle();
   });
@@ -8,7 +18,8 @@ $(function(){
     $($(this).next('.footer-top__list')).slideToggle();
   });
 
-  $('.user-nav__more').on('click', function(){
+  $('.user-nav__more').on('click', function(e){
+    e.preventDefault();
     $('.menu__list').toggleClass('menu__list--active');
   });
 
