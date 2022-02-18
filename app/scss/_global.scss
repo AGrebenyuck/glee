@@ -32,7 +32,7 @@ a{
 }
 
 .title{
-  font-size: 32px;
+  font-size: 38px;
   color: $title;
   text-align: center;
 }
@@ -42,7 +42,7 @@ a{
   display: flex;
   justify-content: center;
   width: 100%;
-  bottom: -225px;
+  bottom: -235px;
   button{
     background-color: rgba($color: #fff, $alpha: .3);
     border: none;
@@ -82,7 +82,7 @@ a{
 .top{
   background-color: #edf1f4;
   text-align: center;
-  height: 130px;
+  height: 123px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,6 +90,8 @@ a{
     color: #222933;
     @extend %rubik-300;
     font-size: 36px;
+    margin-top: -10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -98,6 +100,7 @@ a{
   justify-content: center;
   &__list{
     display: flex;
+    flex-wrap: wrap;
   }
   &__item{
     padding-right: 20px;
@@ -120,5 +123,12 @@ a{
     @extend %rubik-400;
     font-size: 14px;
     color: #222933;
+  }
+}
+
+
+@media (max-width: 550px){
+  .title{
+    font-size: 35px;
   }
 }
